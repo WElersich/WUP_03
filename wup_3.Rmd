@@ -30,7 +30,7 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```{r}
 basicCN + geom_boxplot()
 ```
-  
+  Judging by the median values for the three boxes, it would appear that those who consume more alcohol tend to sit in the back row.
   
 ### get fancy  
 
