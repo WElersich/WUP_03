@@ -40,6 +40,16 @@ The mean alcohol value for the back row is significantly higher than those of th
 
 ## Inferential Tests
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 8.7, 2, 2))
+plot(TukeyHSD(model1),las=2)
+```
+The probability that the results gained being coincidental is slightly greater than 1 in 10000, at 0.001116 (0.0116%). Furthermore, the 95% percent confidence intervals show that the alcohol value for the back row is statistically different from the middle row and the front row. The 95% confidence interval als shows that there is no statistical difference between the front and middle rows.
 ## Conclusions
 
 
